@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PASSWD=$(security find-generic-password -wa $1)
+PASSWD=$(security find-generic-password -a $1 -s $2 -w)
 if [[ -z $PASSWD ]]
 then
     echo -n Account: 
